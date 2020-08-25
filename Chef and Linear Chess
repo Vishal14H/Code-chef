@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main(){
+	int t,n,k;	
+	scanf("%d",&t);
+	for (int i = 0; i < t; i++)
+	{	
+		scanf("%d %d",&n,&k);
+		int a[n],flag=0,min=0;
+		for (int j = 0; j < n; j++)
+		{	scanf("%d",&a[j]);
+		}
+		for (int l = 0; l < n; l++)
+		{
+			if(k%a[l]==0){
+				flag=a[l];
+				if(min<flag)
+				min=a[l];
+			}
+		}
+		if (min==0)
+		printf("-1\n");
+		else
+		printf("%d\n",min);	
+	}	
+	return 0;
+}
